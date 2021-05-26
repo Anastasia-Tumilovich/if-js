@@ -47,3 +47,72 @@ for (let i = 0; i < arr3.length; i++) {
     console.log(arr3[i]);
   }
 }
+
+// LESSON-3
+// task 1
+
+const palindrome = (string) => {
+    return string === string.split('').reverse().join('');
+}
+
+console.log(palindrome('шалаш'));
+
+// task 2
+
+const min = (a, b,) => {
+  if (a < b) {
+      return a;
+  } else if (a > b) {
+      return b;
+  } else {
+      return 'a = b';
+  }
+}
+
+console.log(min(1,2));
+
+const max = (a, b) => {
+  if (a > b) {
+      return a;
+  } else if (a < b) {
+      return b;
+  } else {
+      return 'a = b';
+  }
+}
+
+console.log(max(1,2));
+
+
+// task 3
+
+const array = [0, 10, 7, 3, 0, 30, 39, 40, 100];
+
+const addZero = arr => {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++ ) {
+        if (!(arr[i] % 10)) {
+            let temp = '';
+            array[i] = String(arr[i]);
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == 0) {
+                    temp += 'zero';
+                } else {
+                    temp += arr[i][j];
+                }
+            }
+            result.push(temp);
+        } else {
+            if (arr[i] == 0 ) {
+                result.push('zero');
+            } else {
+                result.push(arr[i]);
+            }
+        }  
+    }
+    return result;
+}
+
+console.log(addZero(array));
+
