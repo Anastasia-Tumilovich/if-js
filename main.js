@@ -94,7 +94,7 @@ const addZero = arr => {
     for (let i = 0; i < arr.length; i++ ) {
         if (!(arr[i] % 10)) {
             let temp = '';
-            array[i] = String(arr[i]);
+            arr[i] = String(arr[i]);
             for (let j = 0; j < arr[i].length; j++) {
                 if (arr[i][j] == 0) {
                     temp += 'zero';
