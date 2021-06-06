@@ -202,17 +202,15 @@ const data = [
     },
   ];
 
-const toFindCity = str => {
+const findHotel = str => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
-        if (typeof(data[i]) === 'object') {
-            for (let key in data[i]) {
-                if (data[i][key].toLowerCase() == str.toLowerCase()) {
-                    result.push(Object.values(data[i]).join(', '));
-                }
-            }
+      for (let key in data[i]) {
+        if (data[i][key].toLowerCase() == str.toLowerCase()) {
+            result.push(Object.values(data[i]).join(', '));
         }
+      }
     }
     return result.join('\n');
 }
-console.log(toFindCity('germany'));
+console.log(findHotel('germany'));
