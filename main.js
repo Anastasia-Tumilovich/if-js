@@ -116,3 +116,34 @@ const addZero = arr => {
 
 console.log(addZero(array));
 
+// Lesson-4
+//task 1
+
+function sum(a){
+    return function(b) {
+        return a + b
+    }
+}
+
+console.log(sum(5)(2));
+
+//task 2
+
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const text = document.querySelectorAll('p');
+
+for (let i = 0; i < text.length; i++) {
+    const changeColor = makeCount(text[i]);
+    text[i].addEventListener('click', changeColor);
+}
+
+function makeCount(el) {
+    let count = 0;
+    return function() {
+        if (count >= colors.length) {
+            count = 0;
+        }
+        el.style.color = colors[count];
+        return count++;
+    }
+}
