@@ -147,3 +147,70 @@ function makeCount(el) {
         return count++;
     }
 }
+
+//lesson-5
+//task 1
+const date = '2020-11-26';
+
+const transformDate = str => {
+    return str.split('-').reverse().join('.');
+}
+
+console.log(transformDate(date));
+
+//task 2
+const data = [
+    {
+      country: 'Russia',
+      city: 'Saint Petersburg',
+      hotel: 'Hotel Leopold',
+    },
+    {
+      country: 'Spain',
+      city: 'Santa Cruz de Tenerife',
+      hotel: 'Apartment Sunshine',
+    },
+    {
+      country: 'Slowakia',
+      city: 'Vysokie Tatry',
+      hotel: 'Villa Kunerad',
+    },
+    {
+      country: 'Germany',
+      city: 'Berlin',
+      hotel: 'Hostel Friendship',
+    },
+    {
+      country: 'Indonesia',
+      city: 'Bali',
+      hotel: 'Ubud Bali Resort&SPA',
+    },
+    {
+      country: 'Netherlands',
+      city: 'Rotterdam',
+      hotel: 'King Kong Hostel',
+    },
+    {
+      country: 'Marocco',
+      city: 'Ourika',
+      hotel: 'Rokoko Hotel',
+    },
+    {
+      country: 'Germany',
+      city: 'Berlin',
+      hotel: 'Hotel Rehberge Berlin Mitte',
+    },
+  ];
+
+const findHotel = str => {
+    const result = [];
+    for (let i = 0; i < data.length; i++) {
+      for (let key in data[i]) {
+        if (data[i][key].toLowerCase() == str.toLowerCase()) {
+            result.push(Object.values(data[i]).join(', '));
+        }
+      }
+    }
+    return result.join('\n');
+}
+console.log(findHotel('germany'));
