@@ -388,3 +388,51 @@ const hotels = [
   
 
   console.log(findCities(hotels));
+
+  //lesson-7
+
+  const obj1 = {
+    a: 'a',
+    b: {
+      a: 'a',
+      b: 'b',
+      c: {
+        a: 1,
+      },
+    },
+  };
+  const obj2 = {
+    b: {
+      c: {
+        a: 1,
+      },
+      b: 'b',
+      a: 'a',
+    },
+    a: 'a',
+  };
+  const obj3 = {
+    a: {
+      c: {
+        a: 'a',
+      },
+      b: 'b',
+      a: 'a',
+    },
+    b: 'b',
+  };
+  
+  const deepEqual = (object1, object2) => {
+    if (object1 === object2) {   // сравниваем два объекта
+      return true; 
+    }
+    for (let key in object1) { // перебираем ключи одного объекта и проверяем их наличие во втором объекте
+      if (!(key in object2) || !deepEqual(object1[key], object2[key])) { // если ключи есть в обоих объектах, рекурсивно вызываем нашу функцию
+        return false;
+      }
+    }
+    return true; // 
+  };
+  
+  console.log(deepEqual(obj1, obj2)); // true
+  console.log(deepEqual(obj1, obj3)); // false
