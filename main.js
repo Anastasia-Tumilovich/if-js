@@ -374,7 +374,7 @@ const hotels = [
   const findCities = arr => {
     const result = {};
     arr.forEach(el => {
-        if (result[`${el.country}`] == undefined) {
+        if (!result[`${el.country}`]) {
           result[`${el.country}`] = [];
           result[`${el.country}`].push(el.city);
         } else {
