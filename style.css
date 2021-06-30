@@ -1,0 +1,91 @@
+.home {
+  background: #eaf0f9;
+}
+.home__wrapper {
+  padding: 120px 101px;
+}
+@media (max-width: 1200px) {
+  .home__wrapper {
+    padding: 6vw;
+  }
+}
+@media (max-width: 360px) {
+  .home__wrapper {
+    padding: 40px 15px;
+  }
+}
+.home__wrapper .section__title {
+  font-family: "Roboto Medium";
+  font-size: 40px;
+  text-align: center;
+}
+@media (max-width: 360px) {
+  .home__wrapper .section__title {
+    font-size: 28px;
+  }
+}
+.home__wrapper .gallery {
+  margin-top: 104px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 360px) {
+  .home__wrapper .gallery {
+    margin-top: 32px;
+  }
+}
+.gallery__item {
+  flex: 1 0 20%;
+}
+.home__wrapper .gallery__item img {
+  width: 100%;
+}
+.home__wrapper .gallery__item h3 {
+  font-family: "Roboto Regular";
+  font-size: 24px;
+  margin-top: 24px;
+}
+@media (max-width: 1200px) {
+  .home__wrapper .gallery__item h3 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 360px) {
+  .home__wrapper .gallery__item h3 {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+.home__wrapper .gallery__item h3 a {
+  text-decoration: none;
+  color: #3077c6;
+}
+.home__wrapper .gallery__item p {
+  font-family: "Roboto Regular";
+  font-size: 24px;
+  letter-spacing: -1px;
+  color: #bfbfbf;
+  margin-top: 24px;
+}
+@media (max-width: 1200px) {
+  .home__wrapper .gallery__item p {
+    font-size: 21px;
+  }
+}
+@media (max-width: 360px) {
+  .home__wrapper .gallery__item p {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+.home__wrapper .gallery__item:not(:first-child) {
+  margin-left: 10px;
+}
+@media (max-width: 800px) {
+  .home__wrapper .gallery__item:nth-child(n+3) {
+    display: none;
+  }
+}
