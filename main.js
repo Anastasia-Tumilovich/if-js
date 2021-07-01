@@ -389,7 +389,7 @@ const hotels = [
 
   console.log(findCities(hotels));
 
-//lesson-7
+  //lesson-7
 
   const obj1 = {
     a: 'a',
@@ -437,7 +437,7 @@ const hotels = [
   console.log(deepEqual(obj1, obj2)); // true
   console.log(deepEqual(obj1, obj3)); // false
 
-  
+
   // lesson-10
 
   const dataHotels = [
